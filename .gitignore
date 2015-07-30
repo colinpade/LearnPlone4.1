@@ -2,3 +2,5 @@
 bin/
 parts/
 var/
+develop-eggs/
+.mr.developer.cfg

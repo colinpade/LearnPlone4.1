@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: optilux.policy
+Version: 1.0
+Summary: Colin learns plone
+Home-page: http://optilux-cinemas.com
+Author: Martin Aspeli
+Author-email: optilude@gmail.com
+License: GPL
+Description: Introduction
+        ============
+        
+        
+        
+        This product may contain traces of nuts.
+        
+        Changelog
+        =========
+        
+        1.0dev (unreleased)
+        -------------------
+        
+        - Initial release
+        
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Programming Language :: Python
