@@ -12,4 +12,6 @@ optilux.policy.egg-info/paster_plugins.txt
 optilux.policy.egg-info/requires.txt
 optilux.policy.egg-info/top_level.txt
 optilux/policy/__init__.py
+optilux/policy/setuphandlers.py
+optilux/policy/testing.py
 optilux/policy/tests.py
