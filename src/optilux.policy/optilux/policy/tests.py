@@ -1,6 +1,7 @@
 import unittest2 as unittest
 from optilux.policy.testing import OPTILUX_POLICY_INTEGRATION_TESTING
 #from .testing import OPTILUX_POLICY_INTEGRATION_TESTING
+from Products.CMFCore.utils import getToolByName
 
 class TestSetup(unittest.TestCase):
 	layer = OPTILUX_POLICY_INTEGRATION_TESTING
@@ -17,16 +18,15 @@ class TestSetup(unittest.TestCase):
 	def test_rold_added(self):
 		portal = self.layer['portal']
 		self.assertTrue("StaffMember" in portal.validRoles())
-# told to add on page 130. Errors can't find getToolByName
-#	def test_workflow_installed(self):
-#		portal = self.layer['portal']
-#		workflow = getToolByName(portal, 'portal_workflow')
-#		self.assertTrue('optilux_sitecontent_workflow' in workflow)
-#	def test_workflows_mapped(self):
-#		portal = self.layer['portal']
-#		workflow = getToolByName(portal, 'portal_workflow')
-#		self.assertEqual(('optilux_sitecontent_workflow',),
-#				workflow.getDefaultChain())
+	def test_workflow_installed(self):
+		portal = self.layer['portal']
+		workflow = getToolByName(portal, 'portal_workflow')
+		self.assertTrue('optilux_sitecontent_workflow' in workflow)
+	def test_workflows_mapped(self):
+		portal = self.layer['portal']
+		workflow = getToolByName(portal, 'portal_workflow')
+		self.assertEqual(('optilux_sitecontent_workflow',),
+				workflow.getDefaultChain())
 	def test_view_permission_for_staffmember(self):
 		portal = self.layer['portal']
 		self.assertTrue('View' in [r['name']
@@ -40,3 +40,9 @@ class TestSetup(unittest.TestCase):
 		acl_users = portal['acl_users']
 		self.assertEquals(1,
 				len(acl_users.searchGroups(name='Staff')))
+
+	def test_PloneFormGen_installed(self):
+		portal = self.layer['portal']
+		portal_types = getToolByName(portal, 'portal_types')
+
+		self.assertTrue("FormFolder" in portal_types)
