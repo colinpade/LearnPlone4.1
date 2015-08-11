@@ -1,10 +1,10 @@
 Metadata-Version: 1.1
 Name: optilux.theme
-Version: 1.0
-Summary: UNKNOWN
-Home-page: http://svn.plone.org/svn/collective/
-Author: UNKNOWN
-Author-email: UNKNOWN
+Version: 2.0
+Summary: Theme for the Optilux website
+Home-page: http://optilux-cinemas.com
+Author: Rob Gietema
+Author-email: rob@fourdigits.nl
 License: GPL
 Description: Introduction
         ============
