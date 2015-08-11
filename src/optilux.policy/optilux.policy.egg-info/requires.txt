@@ -1,6 +1,7 @@
 setuptools
 Plone
 Products.PloneFormGen
+optilux.theme
 
 [test]
 plone.app.testing
